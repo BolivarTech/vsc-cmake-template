@@ -1,0 +1,47 @@
+{
+    "configurations": [
+        {
+            "name": "stm32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32U5xx/Include",
+                "${workspaceFolder}/Drivers/STM32U5xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32U5xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/CubeMX/include",
+                "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\arm-none-eabi\\include",
+                "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\arm-none-eabi\\include\\c++\\11.3.1",
+                "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\arm-none-eabi\\include\\sys",
+                "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\arm-none-eabi\\include\\ssp",
+                "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\arm-none-eabi\\include\\newlib-nano",
+                "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\arm-none-eabi\\include\\machine",
+                "${workspaceFolder}/Project/include"
+            ],
+            "defines": [
+                "USE_FULL_LL_DRIVER",
+                "USE_HAL_DRIVER",
+                "STM32U575xx",
+                "STM32_THREAD_SAFE_STRATEGY=2"
+            ],
+            "compilerPath": "C:\\ST\\STM32CubeCLT\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-arm",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "${workspaceFolder}/Core/Inc",
+                    "${workspaceFolder}/Drivers/CMSIS/Include",
+                    "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32U5xx/Include",
+                    "${workspaceFolder}/Drivers/STM32U5xx_HAL_Driver/Inc",
+                    "${workspaceFolder}/Drivers/STM32U5xx_HAL_Driver/Inc/Legacy",
+                    "${workspaceFolder}/CubeMX/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceRoot}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build cmake",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": ["cmake"]
+        },
+        {
+            "label": "Build clean",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"]
+        },
+        {
+            "label": "Project compile",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": ["-j8"]
+        }
+    ]
+}
