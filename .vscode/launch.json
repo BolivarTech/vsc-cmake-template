@@ -2,23 +2,94 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "d:/jbolivarg/EmbeddedProjects/STM32/cmake-test",
-      "program": "d:/jbolivarg/EmbeddedProjects/STM32/cmake-test/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
+        "name": "JLink launch",
+        "cwd": "${workspaceRoot}",
+        "executable": "${workspaceRoot}/build/cmake-test.elf",
+        "request": "launch",
+        "type": "cortex-debug",
+        "servertype": "stlink",
+        "device": "STM32U575ZI",
+        "interface": "swd",
+        "runToEntryPoint": "main",
+        "preLaunchTask": "Build all", // configured in tasks.json
+        // "preLaunchCommands": ["Build all"], // you can execute command instead of task
+        "svdFile": "C:\\ST\\STM32CubeCLT\\STMicroelectronics_CMSIS_SVD\\STM32U575.svd", // Include svd to watch device peripherals
+        "swoConfig":
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
+            "enabled": true,
+            "cpuFrequency": 160000000,
+            "swoFrequency": 4000000,
+            "source": "probe",
+            "decoders":
+            [
+                {
+                    "label": "ITM port 0 output",
+                    "type": "console",
+                    "port": 0,
+                    "showOnStartup": true,
+                    "encoding": "ascii"
+                }
+            ]
         }
-      ]
-    }
+    },
+    {
+        "name": "JLink attach",
+        "cwd": "${workspaceRoot}",
+        "executable": "${workspaceRoot}/build/cmake-test.elf",
+        "request": "attach",
+        "type": "cortex-debug",
+        "servertype": "jlink",
+        "device": "STM32U575ZI",
+        "interface": "swd",
+        "preLaunchTask": "Build all", // configured in tasks.json
+        // "preLaunchCommands": ["Build all"], // you can execute command instead of task
+        "svdFile": "C:\\ST\\STM32CubeCLT\\STMicroelectronics_CMSIS_SVD\\STM32U575.svd", // Include svd to watch device peripherals
+        "swoConfig":
+        {
+            "enabled": true,
+            "cpuFrequency": 160000000,
+            "swoFrequency": 4000000,
+            "source": "probe",
+            "decoders":
+            [
+                {
+                    "label": "ITM port 0 output",
+                    "type": "console",
+                    "port": 0,
+                    "showOnStartup": true,
+                    "encoding": "ascii"
+                }
+            ]
+        }
+    },
+    {
+        "name": "STlink launch",
+        "cwd": "${workspaceRoot}",
+        "executable": "${workspaceRoot}/build/cmake-test.elf",
+        "request": "launch",
+        "type": "cortex-debug",
+        "servertype": "stlink",
+        "device": "STM32U575ZI",
+        "interface": "swd",
+        "runToEntryPoint": "main",
+        "preLaunchTask": "Build all", // configured in tasks.json
+        // "preLaunchCommands": ["Build all"], // you can execute command instead of task
+        "svdFile": "C:\\ST\\STM32CubeCLT\\STMicroelectronics_CMSIS_SVD\\STM32U575.svd", // Include svd to watch device peripherals
+        "swoConfig": {} // currently (v1.7.0) not supported
+    },
+    {
+        "name": "STlink attach",
+        "cwd": "${workspaceRoot}",
+        "executable": "${workspaceRoot}/build/cmake-test.elf",
+        "request": "attach",
+        "type": "cortex-debug",
+        "servertype": "stlink",
+        "device": "STM32U575ZI",
+        "interface": "swd",
+        "preLaunchTask": "Build all", // configured in tasks.json
+        // "preLaunchCommands": ["Build all"], // you can execute command instead of task
+        "svdFile": "C:\\ST\\STM32CubeCLT\\STMicroelectronics_CMSIS_SVD\\STM32U575.svd", // Include svd to watch device peripherals
+        "swoConfig": {} // currently (v1.7.0) not supported
+    },
   ]
 }

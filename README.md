@@ -31,8 +31,8 @@ STM32_Programmer_CLI -c port=swd speed=Reliable -e all -w .\cmake-test.elf 0x080
 
 ### License
 
-Copyright © [BolivarTech](https://www.bolivartech.com) 2022 All Rights Reserved.
+Copyright © [BolivarTech](https://www.bolivartech.com) 2023 All Rights Reserved.
 
-ISO WIM Costumizer © 2022 by [Julian Bolivar](https://www.bolivartech.com) is licensed under [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+Visual Studio Code cmake template for STM32 MCUs © 2023 by [Julian Bolivar](https://www.bolivartech.com) is licensed under [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 Please see [License File](LICENSE.md) for more information.

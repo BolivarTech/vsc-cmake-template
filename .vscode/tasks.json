@@ -9,6 +9,14 @@
             "args": ["cmake"]
         },
         {
+            "label": "Build all",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": ["all", "-j8"]
+        },
+
+        {
             "label": "Build clean",
             "group": "build",
             "type": "shell",
@@ -21,6 +29,13 @@
             "type": "shell",
             "command": "make",
             "args": ["-j8"]
+        },
+        {
+            "label": "Project install",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": ["install" ]
         }
     ]
 }

@@ -1,9 +1,13 @@
-.PHONY: all build cmake clean format
+# ##############################################################################
+# Make to generate project's files structures
+# Author: Julian Bolivar
+# Date: 2023-10-09
+.PHONY: all build cmake clean install
 
 BUILD_DIR := build
 BUILD_TYPE ?= Debug
 
-all: build
+all: build install
 
 ${BUILD_DIR}/Makefile:
 	cmake \
@@ -18,11 +22,8 @@ cmake: ${BUILD_DIR}/Makefile
 build: cmake
 	$(MAKE) -C ${BUILD_DIR} --no-print-directory
 
-#SRCS := $(shell find . -name '*.[ch]' -or -name '*.[ch]pp')
-#format: $(addsuffix .format,${SRCS})
-
-#%.format: %
-#	clang-format -i $<
+install:
+	$(MAKE) -C ${BUILD_DIR} install
 
 clean:
 	rd /s /q $(BUILD_DIR)
