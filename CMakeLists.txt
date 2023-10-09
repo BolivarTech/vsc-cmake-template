@@ -162,3 +162,17 @@ add_custom_command(TARGET ${EXECUTABLE} POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${EXECUTABLE}>
     ${EXECUTABLE}.bin)
 # ##############################################################################
+
+# ##############################################################################
+# use the install to Flash on the MCU
+
+# Default MCU base flash Memory Address
+set(MCU_MEM_ADD 0x08000000)
+
+file(COPY ./mcu-flash.bat
+     DESTINATION ${CMAKE_BINARY_DIR})
+
+install(CODE "execute_process(COMMAND ${CMAKE_BINARY_DIR}/mcu-flash.bat \
+        ${EXECUTABLE}${CMAKE_EXECUTABLE_SUFFIX_CXX} ${MCU_MEM_ADD})"
+        COMPONENT ${EXECUTABLE})
+# ##############################################################################

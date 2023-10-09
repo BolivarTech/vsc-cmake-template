@@ -5,7 +5,7 @@
 ![licence](https://img.shields.io/badge/language-c/c++-brightgreen.svg?style=flat-square)
 ![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 
-This project is a simple CMake script to compile STM32 MCU Projets on Visual Studio Code.
+This project is a simple CMake script to compile and install STM32 MCU Projets on Visual Studio Code.
 
 This poject is provided "AS IS", no waranty, no responsabilities, no more documentation that the one included in this repository, but the scripts are so simples that is don't needed. ;-)
 
@@ -13,6 +13,11 @@ This poject is provided "AS IS", no waranty, no responsabilities, no more docume
 
 This scripts use the cmake and make command on the windows environments
 in your environment.
+
+## Notes
+
+to flash the MCU
+STM32_Programmer_CLI -c port=swd speed=Reliable -e all -w .\cmake-test.elf 0x08000000 -v -rst -run -score -vb 1
 
 ## Generate Config Files
 
