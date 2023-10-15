@@ -82,7 +82,7 @@ In this section will show how to setup a STM32 VSCODE project from scratch, but 
 To create the STM32 VSCODE project the following steps needs to be followed:
 
 1. [Create STM32 Project](HowTos/New_STM32_Project.md)
-
+2. [Setup Visual Studio Code](HowTos/Setup_VSCODE.md)
 
 ## Notes
 
