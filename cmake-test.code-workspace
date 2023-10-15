@@ -10,6 +10,7 @@
 			"choco",
 			"franneck",
 			"installargs",
+			"NUCLEO",
 			"STMCU"
 		]
 	}
