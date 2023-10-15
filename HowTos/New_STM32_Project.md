@@ -20,7 +20,7 @@ On this case I'm using the [NUCLEO-U575ZI-Q](https://www.st.com/en/evaluation-to
 
 ![NUCLEO-U575ZI-Q](../images/Nucleo-U575ZI-Q.jpg)
 
-At the "*I Need To*" section I select "*Access to Boad Selector*" and that will open a new windows to select the board used on the project.
+At the "*I Need To*" section I select "*Access to Board Selector*" and that will open a new windows to select the board used on the project.
 
 ![STM32 Board Selector](../images/STM32-Board-Selector.png)
 
@@ -32,7 +32,7 @@ On this windows all the pins, clocks and other specific hardware setups needs to
 
 On the "*Project Manager*" tab the environment needs to be configured.
 
-At the "*Project*" section is important to set the "*Project Name*", "*Project Location*" and on the "*Toolchain/IDE*" select '**Makefile**' option.
+At the "*Project*" section is important to set the "*Project Name*", "*Project Location*", "*Toolchain Folder Location*" and on the "*Toolchain/IDE*" select '**Makefile**' option.
 
 ![Project Manager ](../images/STMCubeMX-ProjectManager-1.png)
 
@@ -48,7 +48,7 @@ To generate the code click on "*Generate Code*" and all the code skeleton will b
 
 After this a Makefile is create on the project's root workspace, including all the files required to create the project.
 
-on VSCODE open a new terminal and excecute "**make all**" on the project's root directory, a '*build*' directory should be created and on it all the compile objects and the .bin, .elf, .hex and .map files.
+On VSCODE open a new terminal and execute "**make all**" on the project's root directory, a '*build*' directory should be created and on it all the compile objects and the .bin, .elf, .hex and .map files.
 
 ![STM32 Project Makefile](../images/STM32CubeMX-Makefile.png)
 
