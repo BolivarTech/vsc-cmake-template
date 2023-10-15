@@ -79,27 +79,9 @@ If you wants more information about Chocolatey is recommended read the [official
 
 In this section will show how to setup a STM32 VSCODE project from scratch, but use some script files to do it straightforward.
 
-### Create new STM32 Project
+To create the STM32 VSCODE project the following steps needs to be followed:
 
-Create the project directory and open it on VSCODE and save the Workspace, save it is optional but is helpful to isolate the workspace environment setup.
-
-![Save Workspace](images/Save_Workspace.png)
-
-Select the STM32 Extension on the left panel.
-
-![STM32 Extension](images/Select_STM32.png)
-
-On the Project Manager section select "*Create a new application project*"
-
-![STM32 New Project](images/Create_New_Project.png)
-
-This will open the STM32CubeMX environment to create a new STM32 project, on the "*I Need*" section you can select if you need create the project based on the MCU, a development board or one example.
-
-![STM32CubeMX New Project](images/STM32CuveMX-New-Project.png)
-
-On this case I'm using the [NUCLEO-U575ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-u575zi-q.html) development board.
-
-![NUCLEO-U575ZI-Q](images/Nucleo-U575ZI-Q.jpg)
+1. [Create STM32 Project](HowTos\New_STM32_Project.md)
 
 
 ## Notes
