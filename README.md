@@ -58,7 +58,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 6. Wait a few seconds for the command to complete.
 7. If you don't see any errors, you are ready to use Chocolatey! Type choco or choco -? now, or see Getting Started for usage instructions.
 
-
 Now that Chocolatey is installed on your system, we can proceed to install the other dependencies using PowerShell.
 
 To install Git, Make used the follow command:
@@ -84,7 +83,7 @@ To create the STM32 VSCODE project the following steps needs to be followed:
 1. [Create STM32 Project](HowTos/New_STM32_Project.md)
 2. [Setup Visual Studio Code](HowTos/Setup_VSCODE.md)
 3. [Setup Visual Studio Code Cortex-Debug Extension](HowTos/Setup_Debug.md)
-4. [Setup CMake](HowTos/Setup_CMake.md)
+4. [Setup CMake Project](HowTos/Setup_CMake.md)
 
 ## Notes
 
