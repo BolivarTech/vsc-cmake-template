@@ -39,6 +39,8 @@ set(CPU_PARAMETERS
 
 set(STARTUP_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/CubeMX/src/startup_stm32u575xx.s)
 set(MCU_LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/CubeMX/STM32U575xx_FLASH.ld)
+# Default MCU base flash Memory Address
+set(MCU_MEM_ADD 0x08000000)
 # ##############################################################################
 
 # ##############################################################################
@@ -168,11 +170,8 @@ add_custom_command(TARGET ${EXECUTABLE} POST_BUILD
 # ##############################################################################
 # use the install to Flash on the MCU
 
-# Default MCU base flash Memory Address
-set(MCU_MEM_ADD 0x08000000)
-
 file(COPY ./mcu-flash.bat
-     DESTINATION ${CMAKE_BINARY_DIR})
+    DESTINATION ${CMAKE_BINARY_DIR})
 
 install(CODE "execute_process(COMMAND ${CMAKE_BINARY_DIR}/mcu-flash.bat \
         ${EXECUTABLE}${CMAKE_EXECUTABLE_SUFFIX_CXX} ${MCU_MEM_ADD})"
