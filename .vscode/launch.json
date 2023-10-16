@@ -7,7 +7,7 @@
         "executable": "${workspaceRoot}/build/cmake-test.elf",
         "request": "launch",
         "type": "cortex-debug",
-        "servertype": "stlink",
+        "servertype": "jlink",
         "device": "STM32U575ZI",
         "interface": "swd",
         "runToEntryPoint": "main",
@@ -41,7 +41,7 @@
         "servertype": "jlink",
         "device": "STM32U575ZI",
         "interface": "swd",
-        "preLaunchTask": "Build all", // configured in tasks.json
+        "preLaunchTask": "", // not used becuase it attach to the MCU running process
         // "preLaunchCommands": ["Build all"], // you can execute command instead of task
         "svdFile": "C:\\ST\\STM32CubeCLT\\STMicroelectronics_CMSIS_SVD\\STM32U575.svd", // Include svd to watch device peripherals
         "swoConfig":
@@ -86,7 +86,7 @@
         "servertype": "stlink",
         "device": "STM32U575ZI",
         "interface": "swd",
-        "preLaunchTask": "Build all", // configured in tasks.json
+        "preLaunchTask": "", // not used becuase it attach to the MCU running process
         // "preLaunchCommands": ["Build all"], // you can execute command instead of task
         "svdFile": "C:\\ST\\STM32CubeCLT\\STMicroelectronics_CMSIS_SVD\\STM32U575.svd", // Include svd to watch device peripherals
         "swoConfig": {} // currently (v1.7.0) not supported

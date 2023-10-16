@@ -10,8 +10,12 @@
 			"choco",
 			"franneck",
 			"installargs",
+			"jlink",
 			"Makefiles",
+			"MCU's",
+			"Microcontrollers",
 			"NUCLEO",
+			"stlink",
 			"STMCU"
 		]
 	}

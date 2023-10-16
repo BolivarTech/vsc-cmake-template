@@ -13,7 +13,7 @@
             "group": "build",
             "type": "shell",
             "command": "make",
-            "args": ["all", "-j8"]
+            "args": ["all"]
         },
 
         {
