@@ -1,19 +1,16 @@
 /*
- * printf.h
+ * itm_sendchar.h
  *
- *  Created on: Sep 23, 2023
- *      Author: jbolivarg
+ * Implementation of printf like feature using ARM Cortex M3/M4/ ITM functionality
+ * This function will not work for ARM Cortex M0/M0+
+ * If you are using Cortex M0, then you can use semihosting feature of openOCD
+ * 
+ * Created on: Sep 23, 2023
+ * Author: Julian Bolivar
  */
 
 #ifndef INC_ITM_SENDCHAR_H_
 #define INC_ITM_SENDCHAR_H_
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-//					Implementation of printf like feature using ARM Cortex M3/M4/ ITM functionality
-//					This function will not work for ARM Cortex M0/M0+
-//					If you are using Cortex M0, then you can use semihosting feature of openOCD
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 //Debug Exception and Monitor Control Register base address
 #define DEMCR        			*((volatile uint32_t*) 0xE000EDFCU )
@@ -37,6 +34,5 @@ void ITM_SendChar(uint8_t ch)
 	//Write to ITM stimulus port0
 	ITM_STIMULUS_PORT0 = ch;
 }
-
 
 #endif /* INC_ITM_SENDCHAR_H_ */

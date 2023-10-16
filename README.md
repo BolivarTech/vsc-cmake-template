@@ -85,10 +85,7 @@ To create the STM32 VSCODE project the following steps needs to be followed:
 3. [Setup Visual Studio Code Cortex-Debug Extension](HowTos/Setup_Debug.md)
 4. [Setup CMake Project](HowTos/Setup_CMake.md)
 
-## Notes
 
-to flash the MCU
-STM32_Programmer_CLI -c port=swd speed=Reliable -e all -w .\cmake-test.elf 0x08000000 -v -rst -run -score -vb 1
 
 ## Generate Config Files
 

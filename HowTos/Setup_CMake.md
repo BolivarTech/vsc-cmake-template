@@ -83,3 +83,13 @@ If the command `make all` is executed, the CMake project should be generated, co
 ![CMake Make All](../images/CMAKE-Make-All.png)
 
 Following this procedure the **STM32CubeMX** Make project was converted to a CMake project for **Visual Studio Code**.
+
+## Last Note
+
+When compiling the code, at the end some warning are show, informing about some functions that are not implemented and always will fail.
+
+![Compilation Warnings](../images/CMAKE-Compilation-Warning.png)
+
+This functions are related to the `stdio` library implementation, to fix this...
+
+TODO: Finish the HowTo

@@ -8,6 +8,8 @@
 		"cSpell.words": [
 			"ALLUSERS",
 			"choco",
+			"DEMCR",
+			"eabi",
 			"franneck",
 			"installargs",
 			"jlink",
@@ -15,8 +17,11 @@
 			"MCU's",
 			"Microcontrollers",
 			"NUCLEO",
+			"semihosting",
+			"sendchar",
 			"stlink",
-			"STMCU"
+			"STMCU",
+			"TRCENA"
 		]
 	}
 }
