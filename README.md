@@ -85,13 +85,13 @@ To create the STM32 VSCODE project the following steps needs to be followed:
 3. [Setup Visual Studio Code Cortex-Debug Extension](HowTos/Setup_Debug.md)
 4. [Setup CMake Project](HowTos/Setup_CMake.md)
 
+After follow this steps, the VSCODE environment to manage your code using CMake and making it portable to be compiled and deployed from different environments.
 
+## Know Issues
 
-## Generate Config Files
+The only know issue with the environment is when it is opened, the **CMake Tools** extension try to identify the compiler's capabilities using an simple code, but because the compiler is generating code for the MCU it can't identify it on the proper way and shows an error, to fix it when the windows is shows in the lower right corner, just need to cancel the process and done.
 
-### Add Capabilities
-
-### Optional Features
+![](images/VSCODE-Know-Issues-1.png)
 
 ### Credits
 

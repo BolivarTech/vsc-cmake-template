@@ -21,6 +21,9 @@
 			"sendchar",
 			"stlink",
 			"STMCU",
+			"syscall",
+			"syscalls",
+			"sysmem",
 			"TRCENA"
 		]
 	}

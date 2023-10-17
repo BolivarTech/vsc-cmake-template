@@ -90,6 +90,10 @@ When compiling the code, at the end some warning are show, informing about some 
 
 ![Compilation Warnings](../images/CMAKE-Compilation-Warning.png)
 
-This functions are related to the `stdio` library implementation, to fix this...
+This functions are related to the `stdio` library implementation, to fix this the files *syscalls.c* and *sysmem.c* should be included in the *Core/Src* directory and optional the file *itm_sendchar.h* in the *Core/Inc* folder.
 
-TODO: Finish the HowTo
+![CMAKE Compilation Warning Fix](../images/CMAKE-Compilation-Warning-Fix.png)
+
+The file *itm_sendchar.h* is optional, and it provides the service to write out strings on the SWV channel 0 as a printf. To use it just need to be called in the `_write` function at the *syscalls.c* file.
+
+![use ITM_SendChar](../images/ITM_SendChar.png)
