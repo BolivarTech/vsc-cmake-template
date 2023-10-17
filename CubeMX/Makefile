@@ -71,7 +71,9 @@ C_SOURCES =  \
 ../Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pcd_ex.c \
 ../Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_ll_usb.c \
 ../Core/Src/system_stm32u5xx.c \
-../CubeMX/src/newlib_lock_glue.c
+../CubeMX/src/newlib_lock_glue.c \
+../Core/Src/syscalls.c \
+../Core/Src/sysmem.c
 
 # ASM sources
 ASM_SOURCES =  \
