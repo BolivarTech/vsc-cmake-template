@@ -26,7 +26,7 @@
 | git push -u origin localBranch:remoteBranchToBeCreated | push a NEW local branch to a NEW remote branch with DIFFERENT name |
 | git push origin \<branch> --force | force push to remote (CAREFUL) |
 | git push origin --delete \<branch> | delete a remote branch (CAREFUL) |
-| git remote add \<remote-name> <ssh or <https://github.com/xxxxx.git>> | add new remote |
+| git remote add \<remote-name> <ssh://user-id@host-url:port[git repository path] or https://github.com/xxxxx.git> | add new remote |
 | git remote rename \<old-name> \<new-name> | rename existing remote |
 | git remote remove \<remote-name> | remove an existing remote |
 | git remote set-url \<remote-name> \<ssh or https address> | change existing \<remote>'s repository URL |
@@ -37,38 +37,47 @@
 
 ```text
 # Set the two separated remotes
-git remote add <Name Remote-1> [Remote-1 URL]
-git remote add <Name Remote-2> [Remote-2 URL]
+   git remote add <Name Remote-1> [Remote-1 URL]
+   git remote add <Name Remote-2> [Remote-2 URL]
 
 # Set a main common remote called origin
-git remote add origin [Remote-1 URL]
+   git remote add origin [Remote-1 URL]
+
 # Set push to main remote
-git remote set-url --add --push origin [Remote-1 URL]
+   git remote set-url --add --push origin [Remote-1 URL]
+
 # Set push to Second remote
-git remote set-url --add --push origin [Remote-2 URL]
+   git remote set-url --add --push origin [Remote-2 URL]
 
 # To push on both remotes at the same time
-git push origin
+   git push origin
 
-# To pull from a especific remote
+# Now, the origin remote fetches from [Remote-1 URL], 
+# and pushes to both the [Remote-1 URL] and [Remote-2 URL] repositories.
 
-git pull <Name Remote-1>
+   git remote show origin
+
+# To pull from a specific remote
+
+   git pull <Name Remote-1>
 
 # It is not possible to git pull from multiple repos. 
 # However, you can git fetch from multiple repos with
 # the following command:
 
-git fetch --all
+   git fetch --all
 
 # This will fetch information from all remote repos. 
 # You can switch to the latest version of a branch 
 # on a particular remote with the command:
 
 # Checkout the branch you want to work with.
-git checkout BRANCH
+
+   git checkout BRANCH
 
 # Reset the branch to match the state as on a specific remote.
-git reset --hard REMOTE-ID/BRANCH
+
+   git reset --hard REMOTE-ID/BRANCH
 
 ```
 
@@ -102,7 +111,46 @@ git reset --hard REMOTE-ID/BRANCH
 
 | Command | Description |
 |--|--|
-| git rebase -i \<commit>~X | interactive rebase, starting "X" commits behind <commit>. |
+| git rebase \<branch-1> | Rebase current branch (branch-2) to \<branch-1>|
+| git rebase \<branch-1> \<branch-2> | Rebase \<branch-2> to \<branch-1> |
+| git rebase -i \<commit>~X | interactive rebase, starting "X" commits behind \<commit>. |
+
+```text
+Before rebase:
+
+          A---B---C branch-2
+         /
+    D---E---F---G branch-1
+
+After rebase:
+
+                  A'--B'--C' branch-2
+                 /
+    D---E---F---G branch-1
+```
+
+## Rebase --onto
+
+| Command | Description |
+|--|--|
+| git rebase --onto \<branch-1> \<branch-2> \<branch-3>  | Rebase branch \<branch-3> to \<branch-1>|
+
+```text
+Before rebase:
+    o---o---o---o---o  branch-1
+         \
+          o---o---o---o---o  branch-2
+                           \
+                            o---o---o  branch-3
+
+After rebase:
+
+    o---o---o---o---o  branch-1
+        |            \
+        |             o'--o'--o'  branch-3
+         \
+          o---o---o---o---o  branch-2
+```
 
 ## Commits
 
@@ -129,6 +177,26 @@ git reset --hard REMOTE-ID/BRANCH
 | git tag | show list of all tags |
 | git tag -a v123.456 -m "my tag message" | Add tag to current commit (doesn't have to start with v…. Can be anything without spaces) |
 | git push \<remote> \<tagname> | push tag to remote (must do it explicitly - normal push does not push tags) |
+
+## Merge
+
+| Command | Description |
+|--|--|
+| git merge \<branch-2> | Merge \<branch-2> to current branch (branch-1) |
+
+```text
+Before merge: 
+
+         A---B---C branch-2
+        /
+    ---D---E---F---G branch-1
+
+After merge:
+
+         A---B---C branch-2
+        /         \
+    ---D---E---F---G---H branch-1
+```
 
 ## Diff and Merge Conflicts (console)
 
