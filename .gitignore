@@ -1,2 +1,5 @@
 #build Directory
 build
+
+# Ignore Browser database
+BROWSE.VC.DB*
