@@ -41,7 +41,7 @@
 | git remote show \<remoteName> | show all branches in remote, even those not tracked or fetched |
 | git config --global --add  branch.autoSetupMerge simple | Automatically configuring an upstream branch when its name won't match the local branch |
 | git config --global --add push.autoSetupRemote true | Assume --set-upstream on default push when no upstream tracking exists for the current branch  |
-| git config --global --add push.default current | push the current branch to update a branch with the same name on the receiving end. Works in both central and non-central workflows. |
+| git config --global --add push.default current | Push the current branch to update a branch with the same name on the receiving end. Works in both central and non-central workflows. |
 
 ## Multiple Remotes
 
@@ -99,6 +99,11 @@
 | git branch -d \<local-branch> | safe delete a local branch (won't accept if unmerged or unpushed changes) |
 | git branch -D \<local-branch> | unsafe delete - will delete no matter what |
 | git branch -m \<oldname> \<newname> | rename local branch |
+| git branch -r | Show all remote branches |
+| git ls-remote --heads | Show all remote branches and includes the hash. |
+| git ls-remote | Show all remote branches, includes reference information and the hash. |
+| git show-branch -r | Show all remote branches and it displays almost everything. |
+| git branch --remote -d \<remote>/\<BranchName> | Remove \<BranchName> tracking from \<remote> |
 | git cherry-pick \<commit> | cherry pick \<commit> from some other branch into this one (ADDS COMMIT TO THIS HISTORY) |
 | git cherry-pick \<commit> --no-commit | cherry pick \<commit> from some other branch into this working directory (does not add commit to history) |
 | git merge \<otherbranch> | locally merge \<otherbranch> into current branch |
