@@ -1,5 +1,12 @@
 # Git Command Line Cheat Sheet
 
+## Clone 
+
+| Command | Description |
+|--|--|
+| git clone \<ssh://user-id@host-url:port[git repository path] or https://github.com/xxxxx.git> | Clone the remote repository on a directory with the same repository name |
+| git clone \<ssh://user-id@host-url:port[git repository path] or https://github.com/xxxxx.git> \<dir-name> | Clone the remote repository on a directory with the name \<dir-name> |
+
 ## Stashes
 
 | Command | Description |
@@ -32,6 +39,8 @@
 | git remote set-url \<remote-name> \<ssh or https address> | change existing \<remote>'s repository URL |
 | git branch --set-upstream \<local-branch> origin/\<remote-branch> | set local branch up to track specific remote branch |
 | git remote show \<remoteName> | show all branches in remote, even those not tracked or fetched |
+| git config --global --add  branch.autoSetupMerge simple | Automatically configuring an upstream branch when its name won't match the local branch |
+| git config --global --add --bool push.autoSetupRemote true | Assume --set-upstream on default push when no upstream tracking exists for the current branch  |
 
 ## Multiple Remotes
 
