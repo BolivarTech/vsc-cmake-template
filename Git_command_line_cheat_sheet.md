@@ -111,6 +111,13 @@
 | git checkout --orphan \<newBranchName> | create a branch with NO HISTORY. Useful for essentially squashing all previous commits into one new one. |
 | git checkout \<branchName> | check out an existing local branch |
 
+## Worktree
+
+| Command | Description |
+|--|--|
+| git worktree add <path> | Creates a new work-tree and automatically creates a new branch whose name is the final component of <path> |
+| git worktree add -b <newbranch> <path> | create a new work-tree in ../path, and use git checkout -b newbranch to populate it |
+
 ## Log
 
 | Command | Description |
