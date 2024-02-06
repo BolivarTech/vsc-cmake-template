@@ -117,6 +117,8 @@
 |--|--|
 | git worktree add <path> | Creates a new work-tree and automatically creates a new branch whose name is the final component of <path> |
 | git worktree add -b <newbranch> <path> | create a new work-tree in ../path, and use git checkout -b newbranch to populate it |
+| git worktree list | List the worktrees. The main working tree is listed first, followed by each of the linked working trees. |
+| git worktree remove [-f] <path> | Remove the worktree, if there are uncommitted changes Git will not allow you to remove it by default. You can override this restriction by using the -f option |
 
 ## Log
 
