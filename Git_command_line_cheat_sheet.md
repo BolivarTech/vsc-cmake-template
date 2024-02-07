@@ -33,7 +33,7 @@
 | git push -u origin localBranch:remoteBranchToBeCreated | push a NEW local branch to a NEW remote branch with DIFFERENT name |
 | git push origin \<branch> --force | force push to remote (CAREFUL) |
 | git push origin --delete \<branch> | delete a remote branch (CAREFUL) |
-| git remote add \<remote-name> <ssh://user-id@host-url:port[git repository path] or https://github.com/xxxxx.git> | add new remote |
+| git remote add \<remote-name> \<ssh://user-id@host-url:port[git repository path] or https://github.com/xxxxx.git> | add new remote |
 | git remote rename \<old-name> \<new-name> | rename existing remote |
 | git remote remove \<remote-name> | remove an existing remote |
 | git remote set-url \<remote-name> \<ssh or https address> | change existing \<remote>'s repository URL |
@@ -115,10 +115,10 @@
 
 | Command | Description |
 |--|--|
-| git worktree add <path> | Creates a new work-tree and automatically creates a new branch whose name is the final component of <path> |
-| git worktree add -b <newbranch> <path> | create a new work-tree in ../path, and use git checkout -b newbranch to populate it |
+| git worktree add \<path> | Creates a new work-tree and automatically creates a new branch whose name is the final component of \<path> |
+| git worktree add -b \<newbranch> \<path> | create a new work-tree in ../path, and use git checkout -b newbranch to populate it |
 | git worktree list | List the worktrees. The main working tree is listed first, followed by each of the linked working trees. |
-| git worktree remove [-f] <path> | Remove the worktree, if there are uncommitted changes Git will not allow you to remove it by default. You can override this restriction by using the -f option |
+| git worktree remove [-f] \<path> | Remove the worktree, if there are uncommitted changes Git will not allow you to remove it by default. You can override this restriction by using the -f option |
 
 ## Log
 
