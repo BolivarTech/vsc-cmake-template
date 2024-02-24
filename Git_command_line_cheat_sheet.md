@@ -67,6 +67,14 @@
 
    git remote show origin
 
+# Set the default configured remote for your current branch
+
+   git branch --set-upstream-to [remote]/[branch]
+
+# Set the default remote repository for the branch 'branch_name'
+
+   git branch [branch_name] --set-upstream-to [remote]/[branch]
+
 # To pull from a specific remote
 
    git pull <Name Remote-1>
@@ -280,3 +288,13 @@ git config --global alias.ctree "log --graph --pretty=format:'%Cred%h%Creset -%C
  
 git ctree
 ```
+
+## Submodules
+
+| Command | Description |
+|--|--|
+| git submodule add \<ssh://user-id@host-url:port[git repository path] or https://github.com/xxxxx.git> | Add repository on the URL as submodule | 
+| git submodule | List Submodules on repository |
+| git submodule deinit \<path_to_submodule> | Remove the submodule |
+| git rm \<path_to_submodule> | Remove the submodule from Git directory |
+
